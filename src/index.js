@@ -9,22 +9,3 @@ window.addEventListener("DOMContentLoaded", () => {
   app.addBananas();
   window.__JS_APP = app;
 });
-
-function addBananas(monkeys) {
-  return monkeys.map(monkey => `${monkey} 🍌`);
-}
-
-function setEmojis(emojis) {
-  const wrapper = document.querySelector('#emojis');
-  wrapper.innerHTML = ''; // clear the content of the wrapper div
-
-  for (const emoji of emojis) {
-    const p = document.createElement('p');
-    p.textContent = emoji;
-    wrapper.appendChild(p);
-  }
-}
-
-const monkeys = ['🐒', '🦍', '🦧'];
-const fedMonkeys = addBananas(monkeys);
-setEmojis(fedMonkeys);
